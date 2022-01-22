@@ -1,0 +1,25 @@
+Role of Hibernate Framework
+- ORM/Persistence
+
+Role of Spring Framework
+- Creating Objects of our Classes
+  - But creating object is very easy in Java
+    for ex: Employee emp = new Employee();
+  - Then why do we use Spring for doing this? --> Answer Pending
+- Managing dependencies between objects (DI -> Dependency Injection)
+
+  - To tell Spring to create an object, there are 2 options:
+    1. Configure the class whose object has to be created in a xml file, for ex:
+       <bean id="hw" class="com.cdac.component.HelloWorld" />
+    2. Use annotations
+       @Component("cc") //this replaces <bean id="cc" class="com.cdac.component.CurrencyConverter" />
+       public class CurrencyConverter {
+         ...
+       }
+       But still we need to one setting in the xml file to enable annotations
+	<context:component-scan base-package="com.cdac.component" />
+
+  - To achieve DI in Spring, we need to learn @Autowired annotation
+
+
+
